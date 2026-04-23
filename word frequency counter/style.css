@@ -1,82 +1,83 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
     font-family: sans-serif, monospace;
     background-color: yellow;
-    width: 100vw;
-    height: auto;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow-x: hidden;
+    padding: 20px; /* Prevents content from touching screen edges */
 }
 
 main{
-    margin-top: 4rem;
-    width: 70%;
-    min-height: 70%;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px; /* Limit width on large screens */
+    min-height: 70vh;
     border: 6px solid black;
     /* border-radius: 16px; */
-    padding: 1rem;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #main-header{
-    margin-top: 1.5rem;
-    /* text-align: center; */
-    color: black;
+    /* margin-top: 1.5rem; */
+    margin: 1rem 0;
+    text-align: center;
+    /* color: black; */
 }
 
 #user-text{
     font-size: 1.2rem;
-    font-display: block;
     margin-top: 2.5rem;
-    width: 70%;
-    height: 2.4rem;
-    border: 1.5px solid black;
-    /* border-radius: 12px; */
-    /* border-style: none; */
+    width: 100%;
+    max-width: 600px; 
+    height: 150px;
+    border: 2px solid black;
     padding: 12px;
 }
 
-
-
-
+.btn-container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows buttons to stack on very small screens */
+    margin-top: 1.5rem;
+}
 
 .btn{
-    margin-top: 1rem;
-    width: 180px;
-    height: 38px;
+    width: 140px;
+    height: 45px;
     /* border-radius: 12px; */
     padding: 6px;
     cursor: pointer;
     color: white;
     background-color: black;
     border-style: none;
-    font-size: larger;
+    font-size: 1rem;
+    transition: 0.3s;
 }
 
 .btn:hover{
     background-color: white;
     color: black;
-    border: 2px solid black;
+    border: 1.2px solid black;
 }
 
 #output-box{
-    padding: 12px;
-    margin-top: 1rem;
-    width: 70%;
-    height: auto;
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 600px;
     border: 2px solid black;
     display: none;
 }
-
-
 
 .word-list{
     padding: 2rem;
@@ -84,4 +85,20 @@ main{
 
 .word-list li{
     margin: 10px;
+}
+
+/* Responsive  adjustment for mobile*/
+@media (max-width: 480px) {
+    main {
+        margin-top: 1rem;
+        border-width: 4px;
+    }
+    
+    #main-header {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 100%; /* Buttons stack and go full width on mobile */
+    }
 }
