@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Word Frequency Counter</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <h1 id="main-header">Word Frequency Calculator</h1>
+
+            <input
+                type="text"
+                name="user-text"
+                id="user-text"
+                placeholder="Enter your text here"
+                maxlength="250"
+            />
+            <div class="btn-container">
+                <button id="analyzeBtn" class="btn">Analyze</button>
+                <button id="resetBtn" class="btn">Reset</button>
+            </div>
+            <div class="output-container" id="output-box">
+                <h4 style="text-align: center;">Most Occuring Words
+                </h4>
+                <ol class="word-list">
+                </ol>
+            </div>
+            <script src="main.js"></script>
+        </main>
+    </body>
+</html>
