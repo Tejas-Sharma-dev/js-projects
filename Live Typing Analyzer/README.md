@@ -21,10 +21,7 @@ A sleek, real-time text analysis tool that provides instant feedback on your typ
 * **Performance:** Optimized frequency calculations to ensure the UI remains snappy even with large amounts of text.
 
 ## 🏁 Getting Started
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/Tejas-Sharma-dev/js-projects/live-typing-analyzer.git](https://github.com/Tejas-Sharma-dev/js-projects/live-typing-analyzer.git)
-    ```
+1.  **Clone the repository**
 2.  **Open the project:**
     Simply open `index.html` in your browser to start typing!
 
