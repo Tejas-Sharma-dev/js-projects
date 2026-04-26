@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Typing Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1 id="main-header">Live Typing Analyser</h1>
+        <div id="stats-container">
+            <div class="stats-box">Word Count<span id="word-count-span">0</span></div>
+            <div class="stats-box">Char Count (with space)<span id="char-count-ws-span">0</span></div>
+            <div class="stats-box">Char Count (without space)<span id="char-count-wos-span">0</span></div>
+            <div class="stats-box">Reading Time<span id="read-time-span">0</span></div>
+        </div>
+        <h5 id="top-word-header">Top Word : <span id="top-word"></span></h5>
+        <div id="user-input-container">
+            <textarea name="user-text" id="user-text" placeholder="start typing......" autofocus></textarea>
+        </div>
+        <script src="main.js"></script>
+    </main>
+</body> 
+</html>
