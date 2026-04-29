@@ -1,0 +1,182 @@
+:root{
+    --body-bg-color: #fff;
+    --user-input-container-bg-color: #2F2FE4;
+    --kanban-panel-bg-color:#DBEAFE;
+    --task-card-todo-color: #831C91;
+    --task-card-inprogress-color: #FFD150;
+    --task-card-done-color: #519A66;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--body-bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+main{
+    /* border: 2px solid black; */
+    width: 95%;
+    max-width: 1400px;
+    height: 85vh;
+    background-color: var(--body-bg-color);
+    display: flex;
+    padding: 28px;
+    gap: 12px;
+}
+
+.kanban-container{
+    /* background-color: aqua; */
+    /* flex: 0 0 75%; */
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    border: 5px solid var(--user-input-container-bg-color);
+    border-radius: 16px;
+
+    /* background-color: var(--user-input-container-bg-color) */
+}
+
+.kanban-panel{
+    min-width: 200px;
+    margin-left: 10px;
+    /* min-height: 90%; */
+    background-color: var(--kanban-panel-bg-color);
+    /* border: 1px solid red; */
+    /* gap: 15px; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: inherit;
+    padding: 14px;
+}
+
+.panel-header{
+    /* width: 100%; */
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    color: var(--user-input-container-bg-color);
+    /* display: inline; */
+}
+
+.panel-card-container{
+    flex-grow: 1;
+    margin-top: 6px;
+    /* border: 2px solid black; */
+    height: 90%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    scrollbar-color: var(--user-input-container-bg-color) transparent;
+    scrollbar-width: thin;
+}
+
+.task-todo{
+    background-color: var(--task-card-todo-color);
+}
+
+.task-inprogress{
+    background-color: var(--task-card-inprogress-color);
+}
+
+.task-done{
+    background-color: var(--task-card-done-color);
+}
+
+.dragging{
+    opacity: 0.5;
+}
+
+
+.task-card{
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    /* border: 2px solid red; */
+}
+
+.task-card span{
+    font-weight: bold;
+}
+
+
+.user-input-container{
+    border-radius: 12px;
+    flex: 0 0 25%;
+    background-color: var(--user-input-container-bg-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.user-input-container h1{
+    /* flex: 4; */
+    margin-top: 20px;
+    font-size: 32px;
+    color: #fff;
+}
+
+.user-input-box{
+    /* flex: 6; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.user-input-box label{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#user-input{
+    margin-top: 10px;
+    border-radius: 12px;
+    border-style: none;
+    font-size: 16px;
+    padding: 0.7rem;
+}
+
+#add-task-btn{
+    /* width: 70px; */
+    /* width: fit-content; */
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 12px;
+    border: none;
+    color: var(--user-input-container-bg-color);
+    font-weight: bold;
+    background-color: var(--kanban-panel-bg-color);
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+#add-task-btn:hover{
+    background-color: #fff;
+    color: #2F2FE4;
+}
+
+
+footer{
+    font-weight: 600;
+    color: var(--user-input-container-bg-color);
+}

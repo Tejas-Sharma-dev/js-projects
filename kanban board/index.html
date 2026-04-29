@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kanban Board</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/favicon-16x16.png"
+        />
+        <link rel="manifest" href="assets/site.webmanifest" />
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <main>
+            <div class="kanban-container">
+                <div class="kanban-panel">
+                    <div class="panel-header">
+                        <h3>To Do</h3>
+                        <span id="todo-count-span"></span>
+                    </div>
+                    <div
+                        class="panel-card-container"
+                        id="todo-drop-target"
+                    ></div>
+                </div>
+                <div class="kanban-panel">
+                    <div class="panel-header">
+                        <h3>In Progress</h3>
+                        <span id="inprogress-count-span"></span>
+                    </div>
+                    <div
+                        class="panel-card-container"
+                        id="inprogress-drop-target"
+                    ></div>
+                </div>
+                <div class="kanban-panel">
+                    <div class="panel-header">
+                        <h3>Done</h3>
+                        <span id="done-count-span"></span>
+                    </div>
+                    <div
+                        class="panel-card-container"
+                        id="done-drop-target"
+                    ></div>
+                </div>
+            </div>
+            <div class="user-input-container">
+                <h1>Kanban Board</h1>
+                <div class="user-input-box">
+                    <label for="user-input">Add New Task</label>
+                    <input
+                        type="text"
+                        name="user-input"
+                        id="user-input"
+                        placeholder="Enter Task..."
+                        maxlength="50"
+                        required
+                    />
+                    <button id="add-task-btn">Add Task</button>
+                </div>
+            </div>
+        </main>
+        <footer>Made with Pure Vanilla JS &copy;</footer>
+        <script src="main.js"></script>
+    </body>
+</html>
